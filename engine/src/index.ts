@@ -123,6 +123,8 @@ function createOrder(input: CreateOrderInput): OrderRecord {
     if (queue.length === 0) oppSide.delete(price);
 
   }
+  // Remaining orders to be put i orderbook logic remaining
+
   return order;
 }
 
