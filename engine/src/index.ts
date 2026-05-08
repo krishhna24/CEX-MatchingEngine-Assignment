@@ -97,7 +97,7 @@ function createOrder(input: CreateOrderInput): OrderRecord {
 
     const queue = oppSide.get(price)!; //FIFO Price
 
-    while (remaining <= 0 && queue.length > 0) {
+    while (remaining >= 0 && queue.length > 0) {
       const resting = queue[0]!;
       const fillQty = Math.min(remaining, resting.qty - resting.filledQty);
       const fill: Fill = {
